@@ -1,0 +1,10 @@
+--- pmc.c	2018-08-29 11:52:59.185588210 +0800
++++ pmc_new.c	2018-08-29 11:53:47.446292392 +0800
+@@ -24,6 +24,7 @@
+ #include <linux/proc_fs.h>
+ #include <linux/fcntl.h>
+ #include <linux/smp.h>
++#include <linux/uaccess.h>
+ #include <asm/msr.h>
+ #include <asm/uaccess.h>
+ #include "ioctl_query.h"

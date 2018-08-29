@@ -1,0 +1,21 @@
+--- cpu.c	2018-08-29 11:52:59.185588210 +0800
++++ cpu_new.c	2018-08-29 11:55:55.732049064 +0800
+@@ -194,7 +194,8 @@
+     get_family_model(&family, &model);
+ 
+     int isXeon = is_Xeon();
+-
++    cpu_model = &cpu_model_intel_xeon_ex;
++/*
+     for (i = 0; known_cpus[i].microarch != Invalid; i++)
+     {
+         microarch_ID_t c = known_cpus[i];
+@@ -223,7 +224,7 @@
+             break;
+         }
+     }
+-
++*/
+     if (!cpu_model)
+     {
+         return NULL;

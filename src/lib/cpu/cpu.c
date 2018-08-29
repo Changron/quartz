@@ -194,7 +194,8 @@ cpu_model_t *cpu_model()
     get_family_model(&family, &model);
 
     int isXeon = is_Xeon();
-
+    cpu_model = &cpu_model_intel_xeon_ex;
+/*
     for (i = 0; known_cpus[i].microarch != Invalid; i++)
     {
         microarch_ID_t c = known_cpus[i];
@@ -223,7 +224,7 @@ cpu_model_t *cpu_model()
             break;
         }
     }
-
+*/
     if (!cpu_model)
     {
         return NULL;
